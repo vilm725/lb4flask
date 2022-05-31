@@ -14,4 +14,7 @@ python3 -m pytest test2.py -v
 python3 -m pytest test2.py --cov -v
 ```
 
+# Déployer l'infras as code, choisir si scale ou non
+docker-compose up --build -d --scale app=2
+
 💡 Note : pour la version 3 de python, ajouter 3 devant pip et python 🐍
