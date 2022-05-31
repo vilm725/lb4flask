@@ -1,13 +1,17 @@
-version: "3"
+version: '3.7'
+
 services:
-  myflaskapp:
-    container_name: myflaskapp
-    hostname: myflaskapp
-    build: .
+  app:
+    container_name: flaskapp
+    build: app
+    hostname: flaskappserver
+    restart: unless-stopped
+  nginx:
+    container_name: nginxlb
+    build: nginx
+    hostname: nginxserver
     restart: unless-stopped
     ports:
-      - "8887:8085"
-    volumes:
-      - data:/home
-volumes:
-  data:
+      - 80:80
+    depends_on:
+      - app
