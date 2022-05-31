@@ -1,0 +1,12 @@
+Click
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+xmlrunner
+pytest-flask
+coverage
+pytest-cov
+virtualenv
+Flask
+Flask-WTF
